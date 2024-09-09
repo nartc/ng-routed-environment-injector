@@ -1,17 +1,17 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {Wrapper} from "./wrapper.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
-  template: `
-    <h1>Welcome to {{title}}!</h1>
-
-    <router-outlet />
-  `,
-  styles: [],
+    selector: 'app-root',
+    standalone: true,
+    imports: [RouterOutlet, Wrapper],
+    template: `
+        <h1>Welcome to {{ title }}!</h1>
+        <app-wrapper/>
+    `,
+    styles: [],
 })
 export class AppComponent {
-  title = 'ng-routed-environment-injector';
+    title = 'ng-routed-environment-injector';
 }
